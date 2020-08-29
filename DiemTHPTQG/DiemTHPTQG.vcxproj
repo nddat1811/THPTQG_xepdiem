@@ -140,9 +140,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="DiemTHPTQG.cpp" />
+    <ClCompile Include="ReadWriteFile.cpp" />
+    <ClCompile Include="sortDecending.cpp" />
     <ClCompile Include="tinhSum.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ReadWriteFile.h" />
+    <ClInclude Include="sortDecending.h" />
     <ClInclude Include="tinhSum.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

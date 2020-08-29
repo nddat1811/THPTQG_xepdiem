@@ -21,9 +21,21 @@
     <ClCompile Include="tinhSum.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ReadWriteFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sortDecending.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="tinhSum.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ReadWriteFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sortDecending.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
