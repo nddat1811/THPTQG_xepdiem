@@ -57,7 +57,7 @@ void readCSV(vector<THPTQG>& a) {
 
 void writeExport(vector<THPTQG> a)
 {
-    ofstream fout("DiemTHPTBKxeptheoD.csv");
+    ofstream fout("DiemTHPTBKxeptheoB.csv");
 
     fout << "No,Math,Van,Anh,Ly,Hoa,Sinh,Su,Dia,GDCD,KhoiA,KhoiA1,KhoiB,KhoiD" << endl;
 

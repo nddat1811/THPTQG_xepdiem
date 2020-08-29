@@ -8,6 +8,6 @@ int main()
 {
     vector<THPTQG> a;
     readCSV(a);
-    sortDescendingkhoiD(a);
+    sortDescendingkhoiB(a);
     writeExport(a);
 }
