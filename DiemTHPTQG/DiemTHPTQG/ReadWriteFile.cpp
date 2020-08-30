@@ -5,7 +5,7 @@ void readCSV(vector<THPTQG>& a) {
     THPTQG b;
 
 
-    ifstream fin("BK.csv");
+    ifstream fin("QT.csv");
     if (!fin.is_open()) {
         cout << "can not";
         return;
@@ -46,23 +46,28 @@ void readCSV(vector<THPTQG>& a) {
         fin.ignore(1, ';');
         fin >> b.GDCD;
         fin.ignore(1, '\n');
-        b.khoiA = sumKhoiA(b.Math, b.Physical, b.Chemistry);
-        b.khoiA1 = sumKhoiA1(b.Math, b.Physical, b.English);
-        b.khoiB = sumKhoiB(b.Math, b.Biology, b.Chemistry);
-        b.khoiD = sumKhoiD(b.Math, b.Biology, b.Chemistry);
+       
+        //cout << b.khoiD << endl;
         a.push_back(b);
     }
     fin.close();
+
+    for (int i = 0;i < a.size();i++) {
+        a[i].khoiA = sumKhoiA(a[i].Math, a[i].Physical, a[i].Chemistry);
+        a[i].khoiA1 = sumKhoiA1(a[i].Math, a[i].Physical, a[i].English);
+        a[i].khoiB = sumKhoiB(a[i].Math, a[i].Biology, a[i].Chemistry);
+        a[i].khoiD = sumKhoiD(a[i].Math, a[i].Literature, a[i].English);
+    }
 }
 
 void writeExport(vector<THPTQG> a)
 {
-    ofstream fout("DiemTHPTBKxeptheoB.csv");
+    ofstream fout("DiemTHPTQTxeptheoB.csv");
 
     fout << "No,Math,Van,Anh,Ly,Hoa,Sinh,Su,Dia,GDCD,KhoiA,KhoiA1,KhoiB,KhoiD" << endl;
 
     for (int i = 0;i < a.size();i++) {
-        //cout << "Khoi D" << a[i].khoiD << endl;
+       // cout << "Khoi D" << a[i].khoiD << endl;
         fout << a[i].SBD << "," << a[i].Math << "," << a[i].Literature << "," << a[i].English << "," << a[i].Physical << "," << a[i].Chemistry << "," << a[i].Biology
             << "," << a[i].History << "," << a[i].Geography << "," << a[i].GDCD << "," << a[i].khoiA << "," << a[i].khoiA1 << "," << a[i].khoiB << "," << a[i].khoiD << endl;
         //cout << a[i].SBD << "," << a[i].Math << "," << a[i].Literature << "," << a[i].English << "," << a[i].Physical << "," << a[i].Chemistry << "," << a[i].Biology
