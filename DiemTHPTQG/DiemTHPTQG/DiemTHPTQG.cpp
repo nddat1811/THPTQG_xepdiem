@@ -6,7 +6,7 @@
 
 int main()
 {
-    vector<THPTQG> a;
+    vector<THPTQG> a;   //2
     readCSV(a);
     sortDescendingkhoiB(a);
     writeExport(a);
